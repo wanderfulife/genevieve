@@ -7,11 +7,11 @@
 				{{ option.text }}
 			</option>
 		</select>
-		<input v-if="VAR === 'Autre'" class="form-control" type="text" v-model="VAR_DETAIL" placeholder="Precisions">
+		<input v-if="VAR === 'Autre'" class="form-control" type="text" v-model="VAR_DETAIL" placeholder="préciser">
 		<button v-if="VAR" @click="next" class="btn-next">Suivant</button>
 		<button @click="back" class="btn-return">retour</button>
 	</div>
-	
+
 </template>
 
 <script>

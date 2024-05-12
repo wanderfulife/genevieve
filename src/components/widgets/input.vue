@@ -1,5 +1,5 @@
 <template>
-	<div id="">
+	<div id="" v-if="level === ">
 		<h1>TEXT</h1>
 		<input class="form-control" type="text" v-model="VAR" placeholder="Precisions">
 		<button v-if="VAR" @click="next" class="btn-next">Suivant</button>
