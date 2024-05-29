@@ -13,7 +13,11 @@
 
 		<div id="zone" v-if="level === 2">
 			<h1>Zone d'enquête</h1>
-			<input class="form-control" type="text" v-model="zone">
+			<select v-model="zone" class="form-control">
+				<option v-for="option in accesQuai" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
 			<button v-if="zone" @click="next" class="btn-next">Suivant</button>
 			<button @click="back" class="btn-return">retour</button>
 		</div>
@@ -182,9 +186,9 @@
 
 
 		<div id="end"
-			v-if="(level === 13 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 12 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
+			v-if="(level === 13 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 12 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10')) || (level === 4 && (Q1 === '2' || Q1==='3' )) ">
 			<h2>Merci pour votre réponse et bon voyage. </h2>
-			<button @click="submitSurvey" class="btn-next">FINIR QUESTIONNAIRE</button>
+			<button @click=" submitSurvey" class="btn-next">FINIR QUESTIONNAIRE</button>
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
@@ -200,7 +204,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { q1,q2, q3, q3a, q3b, q3c, q3d, q4, q5, q6, q7, q8 } from "./reponses";
+import { q1, q2, q3, q3a, q3b, q3c, q3d, q4, q5, q6, q7, q8, accesQuai } from "./reponses";
 import GareSelector from "./GareSelector.vue";
 import CommuneSelector from './CommuneSelector.vue';
 import { db } from "../firebaseConfig";

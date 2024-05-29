@@ -1,4 +1,15 @@
 
+const accesQuai = [
+	{ id: 1, output: "1", text: "Accès 1 (ascenseur à droite en travaux)" },
+	{ id: 2, output: "2", text: "Accès 2 bâtiment voyageur" },
+	{ id: 3, output: "3", text: "Accès 3 (l'autre coté de la passerelle)" },
+	{
+		id: 4,
+		output: "4",
+		text: "Accès 4 derrière l'escalier, au niveau de l'ascenseur)",
+	},
+];	
+
 
 const q1 = [
 	{ id: 1, output: "1", text: "Je vais prendre le train" },
@@ -193,4 +204,4 @@ const q8 = [
 
 
 
-export { q1, q2, q3, q3a, q3b, q3c, q3d, q4, q5, q6, q7, q8};
+export { q1, q2, q3, q3a, q3b, q3c, q3d, q4, q5, q6, q7, q8, accesQuai };
