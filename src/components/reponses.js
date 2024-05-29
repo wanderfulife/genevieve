@@ -8,6 +8,16 @@ const accesQuai = [
 		output: "4",
 		text: "Accès 4 derrière l'escalier, au niveau de l'ascenseur)",
 	},
+	{
+		id: 5,
+		output: "5",
+		text: "Quai direction Paris",
+	},
+	{
+		id: 6,
+		output: "6",
+		text: "quais direction Banlieue",
+	},
 ];	
 
 
