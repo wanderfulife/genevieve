@@ -112,7 +112,8 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="Q4" v-if="level === 7">
+		<div id="Q4"
+			v-if="(level === 7 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 6 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
 			<h1> Pour ce trajet en train, quelle sera votre gare de descente sur la ligne C ?</h1>
 			<select v-model="Q4" class="form-control">
 				<option v-for="option in q4" :key="option.id" :value="option.output">
@@ -123,7 +124,8 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="Q5" v-if="level === 8">
+		<div id="Q5"
+			v-if="(level === 8 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 7 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
 			<h1> Quel est le motif de votre déplacement ? </h1>
 			<select v-model="Q5" class="form-control">
 				<option v-for="option in q5" :key="option.id" :value="option.output">
@@ -134,7 +136,8 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="Q6" v-if="level === 9">
+		<div id="Q6"
+			v-if="(level === 9 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 8 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
 			<h1> A quelle fréquence utilisez-vous la gare ?</h1>
 			<select v-model="Q6" class="form-control">
 				<option v-for="option in q6" :key="option.id" :value="option.output">
@@ -145,7 +148,8 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="Q7" v-if="level === 10">
+		<div id="Q7"
+			v-if="(level === 10 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 9 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
 			<h1>Avec quel titre de transport voyagez-vous?</h1>
 			<select v-model="Q7" class="form-control">
 				<option v-for="option in q7" :key="option.id" :value="option.output">
@@ -156,7 +160,8 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="Q8" v-if="level === 11">
+		<div id="Q8"
+			v-if="(level === 11 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 10 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
 			<h1>Quel âge avez-vous?</h1>
 			<select v-model="Q8" class="form-control">
 				<option v-for="option in q8" :key="option.id" :value="option.output">
@@ -167,7 +172,8 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="Q9" v-if="level === 12">
+		<div id="Q9"
+			v-if="(level === 12 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 11 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
 			<h1>Avez-vous des suggestions pour améliorer les conditions d’accès à cette gare ?</h1>
 			<input class="form-control" type="text" v-model="Q9" placeholder="Precisions">
 			<button v-if="Q9" @click="next" class="btn-next">Suivant</button>
@@ -175,7 +181,8 @@
 		</div>
 
 
-		<div id="end" v-if="level === 13 || (level === 4 && Q1 !== '1')">
+		<div id="end"
+			v-if="(level === 13 && (Q3 === '2' || Q3 === '3' || Q3 === '4' || Q3 === '5' || Q3 === '6' || Q3 === '7')) || (level === 12 && (Q3 === '1' || Q3 === '8' || Q3 === '9' || Q3 === '10'))">
 			<h2>Merci pour votre réponse et bon voyage. </h2>
 			<button @click="submitSurvey" class="btn-next">FINIR QUESTIONNAIRE</button>
 			<button @click="back" class="btn-return">retour</button>
